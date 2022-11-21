@@ -45,7 +45,7 @@ export const theme = {
     none: 0,
   },
   shadows: {
-    main: '0 7px 10px rgba(204, 28, 28, 0.4)',
+    main: '0 10px 30px rgba(204, 60, 28, 0.6)',
     cardHover:
       '0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)',
   },
