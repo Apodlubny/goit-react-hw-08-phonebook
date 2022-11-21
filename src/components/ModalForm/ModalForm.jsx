@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { NAME_MATCH, SignupSchema } from 'constants/formConstants';
+import { SignupSchema } from 'constants/formConstants';
 import { FormError } from 'components/ContactForm/ContactForm';
 import { FormBlock, Input, Label } from './ModalForm.styled';
 import Loader from 'components/Loader';
@@ -37,7 +37,7 @@ const ModalForm = ({ onSubmit, isUpdaiting }) => {
             id="contactName"
             type="text"
             name="name"
-            pattern={NAME_MATCH}
+            // pattern={NAME_MATCH}
             autoComplete="off"
             placeholder="Name"
             required

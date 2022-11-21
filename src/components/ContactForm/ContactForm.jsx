@@ -9,7 +9,7 @@ import {
   useAddContactMutation,
   useGetContactsQuery,
 } from 'redux/contacts/contactsSlice';
-import { NAME_MATCH, SignupSchema } from 'constants/formConstants';
+import { SignupSchema } from 'constants/formConstants';
 import AddContactIcon from 'components/Icons/AddContactIcon/AddContactIcon';
 
 export const FormError = ({ name }) => {
@@ -72,7 +72,7 @@ const ContactForm = () => {
           id="name"
           type="text"
           name="name"
-          pattern={NAME_MATCH}
+          // pattern={NAME_MATCH}
           placeholder="Name"
           required
         />
