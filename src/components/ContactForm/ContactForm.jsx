@@ -25,6 +25,7 @@ const ContactForm = () => {
     try {
       e.preventDefault();
       const name = e.target.name.value;
+
       const number = e.target.number.value;
       const contactsName = contacts.find(contact => contact.name === name);
       const contactsNumber = contacts.find(

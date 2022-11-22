@@ -8,9 +8,9 @@ const modalRoot = document.querySelector('#modal-root');
 const Modal = ({ onClose, children }) => {
   useEffect(() => {
     const handleKeyDown = e => {
-      if (e.code === 'Escape') {
-        onClose();
-      }
+      // if (e.code === 'Escape') {
+      //   onClose();
+      // }
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -22,14 +22,14 @@ const Modal = ({ onClose, children }) => {
     };
   }, [onClose]);
 
-  const handleBackDropClick = e => {
-    if (e.currentTarget === e.target) {
-      onClose();
-    }
-  };
+  // const handleBackDropClick = e => {
+  //   if (e.currentTarget === e.target) {
+  //     onClose();
+  //   }
+  // };
 
   return createPortal(
-    <Overlay onClick={handleBackDropClick}>
+    <Overlay>
       <ModalWindow>{children}</ModalWindow>
     </Overlay>,
     modalRoot

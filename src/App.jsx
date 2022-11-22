@@ -41,14 +41,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<SharedLayout user={isLoggedIn} />}>
             <Route index element={<Home />} />
-            <Route
-              path="contacts"
-              element={
-                <PrivateRoute user={isLoggedIn}>
-                  <Contacts />
-                </PrivateRoute>
-              }
-            />
+
             <Route
               path="login"
               element={
@@ -71,6 +64,14 @@ export const App = () => {
                 >
                   <Register />
                 </PublicRoute>
+              }
+            />
+            <Route
+              path="contacts"
+              element={
+                <PrivateRoute user={isLoggedIn} redirectTo="/login">
+                  <Contacts />
+                </PrivateRoute>
               }
             />
             <Route path="*" element={<Error />} />

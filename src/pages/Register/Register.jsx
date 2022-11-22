@@ -27,7 +27,6 @@ export default function Register() {
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
       case 'name':
-        console.log('Name');
         return setName(value);
       case 'email':
         return setEmail(value);
@@ -123,7 +122,7 @@ export default function Register() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                disabled={name === '' || email === '' || password === ''}
+                // disabled={name === '' || email === '' || password === ''}
               >
                 Sign In
               </Button>
