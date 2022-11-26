@@ -17,6 +17,7 @@ const ContactEditorModal = ({ handleShowModal }) => {
     useUpdateContactMutation();
   const { data: contacts } = useGetContactsQuery();
   const dispatch = useDispatch();
+
   const handleUpdateContact = async fields => {
     try {
       dispatch(showModalChange());
