@@ -36,6 +36,7 @@ const ContactEditorModal = ({ handleShowModal }) => {
           icon: 'error',
           confirmButtonText: 'Got it',
         });
+
         return;
       }
 
